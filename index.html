@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>STRIDE — Premium Teal Edition | Luxury Performance Footwear</title>
+<meta name="description" content="Discover STRIDE, the ultimate blend of luxury teal design and athletic performance. Engineered for comfort and built for style. Shop our premium collection today.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -36,29 +37,31 @@
   @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
   /* COMPONENTS */
-  .container { max-width: 1300px; margin: 0 auto; padding: 5rem 2rem; }
-  .sec-title { font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; color: var(--teal-deep); line-height: 1.1; margin-bottom: 1.5rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem; }
+  .sec-title { font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; color: var(--teal-deep); line-height: 1.1; margin-bottom: 2rem; }
   .sec-title em { font-style: italic; font-weight: 300; }
-  .large-desc { font-size: 1.15rem; color: #5a7171; max-width: 950px; margin: 0 auto 3rem auto; line-height: 1.9; text-align: justify; }
+  .detail-text { font-size: 1.1rem; color: #4a5a5a; margin-bottom: 1.5rem; line-height: 2; text-align: justify; }
   
   .btn-teal { background: var(--teal-deep); color: white; padding: 1.2rem 3rem; border-radius: 50px; border: none; font-weight: 600; cursor: pointer; transition: 0.4s; text-transform: uppercase; letter-spacing: 1px; }
   .btn-teal:hover { background: var(--teal-mid); box-shadow: 0 15px 30px rgba(0,77,77,0.25); transform: translateY(-3px); }
 
+  /* FAQ STYLING */
+  .faq-container { max-width: 900px; margin: 0 auto; }
+  .faq-item { background: var(--gray-soft); padding: 2rem; border-radius: 20px; margin-bottom: 1.5rem; border-left: 5px solid var(--teal-light); }
+  .faq-item h4 { color: var(--teal-deep); margin-bottom: 1rem; font-size: 1.3rem; }
+  .faq-item p { color: #5a7171; font-size: 1rem; }
+
   /* PRODUCT GRID */
   .grid-full { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
   .shoe-card { background: white; border-radius: 30px; padding: 1.5rem; border: 1px solid var(--teal-pale); transition: 0.4s; text-align: center; }
-  .shoe-card:hover { border-color: var(--teal-mid); box-shadow: 0 25px 50px rgba(0,77,77,0.1); }
   .shoe-card img { width: 85%; height: 200px; object-fit: contain; margin-bottom: 1.5rem; transition: 0.5s; }
-  .shoe-card:hover img { transform: scale(1.1) rotate(-5deg); }
-  .shoe-card h3 { font-size: 1.2rem; color: var(--teal-deep); margin-bottom: 0.5rem; }
-  .shoe-card p { font-weight: 700; color: var(--teal-mid); }
+  .shoe-card h3 { font-size: 1.2rem; color: var(--teal-deep); }
   
   /* FOOTER */
   footer { background: var(--obsidian); color: rgba(255,255,255,0.6); padding: 5rem 5% 2rem 5%; margin-top: 5rem; }
   .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; }
-  .foot-title { color: var(--teal-light); margin-bottom: 1.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
-  .foot-link { color: rgba(255,255,255,0.5); text-decoration: none; display: block; margin-bottom: 0.8rem; transition: 0.3s; cursor: pointer; font-size: 0.9rem; }
-  .foot-link:hover { color: var(--white); padding-left: 8px; }
+  .foot-title { color: var(--teal-light); margin-bottom: 1.5rem; font-size: 1rem; text-transform: uppercase; }
+  .foot-link { color: rgba(255,255,255,0.5); text-decoration: none; display: block; margin-bottom: 0.8rem; font-size: 0.9rem; }
 
   @media (max-width: 1024px) { .grid-full, .foot-grid { grid-template-columns: 1fr 1fr; } .sec-title { font-size: 3rem; } }
   @media (max-width: 600px) { .grid-full, .foot-grid { grid-template-columns: 1fr; } }
@@ -71,21 +74,22 @@
   <ul class="nav-links">
     <li><a onclick="showPage('collection')">Collection</a></li>
     <li><a onclick="showPage('about')">The Brand</a></li>
-    <li><a onclick="showPage('quality')">Quality</a></li>
     <li><a onclick="showPage('faq')">FAQ</a></li>
+    <li><a onclick="showPage('contact')">Contact</a></li>
     <li><a onclick="showPage('privacy')">Privacy</a></li>
   </ul>
 </nav>
 
 <main id="home" class="page-content active">
-  <section class="container" style="display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:2rem;">
+  <section class="container" style="display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:3rem;">
     <div>
       <h1 class="sec-title">The Art of <em>Active</em> Living.</h1>
-      <p class="large-desc" style="text-align:left;">STRIDE represents the intersection of luxury design and athletic performance. Our mission is to provide footwear that supports your daily movement with scientifically-backed comfort.</p>
-      <button class="btn-teal" onclick="showPage('collection')">View Full Catalog</button>
+      <p class="detail-text">At STRIDE, we believe that high-performance footwear shouldn't sacrifice aesthetic elegance. Our design philosophy is rooted in the "Premium Teal" aesthetic—a color palette that represents both the tranquility of nature and the focus required for peak performance. We don't just make shoes; we engineer movement solutions for the modern individual who demands excellence in every step of their journey.</p>
+      <p class="detail-text">Every pair is the result of thousands of hours of testing. By combining sustainable materials with advanced kinetic engineering, we've created a line of footwear that adapts to your unique foot structure while maintaining its structural integrity over time. Whether you are navigating city streets or pushing your limits in training, STRIDE provides the foundation you need to excel.</p>
+      <button class="btn-teal" onclick="showPage('collection')">Explore the Collection</button>
     </div>
     <div style="text-align: right;">
-      <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=600&q=80" style="width:65%; border-radius: 20px;" alt="Teal Sneaker">
+      <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=600&q=80" style="width:85%; border-radius: 30px; box-shadow: 0 40px 80px rgba(0,77,77,0.15);" alt="Teal Sneaker">
     </div>
   </section>
 </main>
@@ -93,6 +97,7 @@
 <main id="collection" class="page-content">
   <div class="container">
     <h2 class="sec-title">The <em>Complete</em> Collection</h2>
+    <p class="detail-text" style="max-width:800px;">Explore our curated selection of high-performance footwear. Each model is specifically designed for a different facet of the active lifestyle, ensuring you have the perfect pair for any occasion.</p>
     <div class="grid-full">
         <div class="shoe-card"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400"><h3>Crimson Peak</h3><p>$189</p></div>
         <div class="shoe-card"><img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=400"><h3>Solar Flare</h3><p>$195</p></div>
@@ -104,64 +109,76 @@
 
 <main id="about" class="page-content">
   <div class="container">
-    <h2 class="sec-title">Our <em>Philosophy</em></h2>
-    <p class="large-desc">Founded in 2026, STRIDE began as a small project to solve a common problem: the trade-off between style and orthopedic support. We believe that your footwear should never be a distraction.</p>
-    
-    <h3 class="sec-title" style="font-size:2.5rem;">Contact <em>Us</em></h3>
-    <p class="large-desc">For inquiries regarding orders, collaborations, or technical support, please reach out to our dedicated team.</p>
-    <div style="background:var(--gray-soft); padding:3rem; border-radius:20px; text-align:center;">
-        <h4 class="foot-title" style="color:var(--teal-deep);">Direct Email</h4>
-        <a href="mailto:tanushsatgur11@gmail.com" style="font-size:1.5rem; color:var(--teal-mid); text-decoration:none; font-weight:700;">tanushsatgur11@gmail.com</a>
-        <p style="margin-top:1rem; color:#5a7171;">Phone Support: +1 (800) STRIDE-01</p>
-    </div>
-  </div>
-</main>
-
-<main id="quality" class="page-content">
-  <div class="container">
-    <h2 class="sec-title">Engineered <em>Excellence</em></h2>
-    <p class="large-desc">Every pair undergoes a 30-point inspection. We utilize a unique heat-mapped cushioning system that provides extra support where your foot needs it most.</p>
+    <h2 class="sec-title">Our <em>Story & Philosophy</em></h2>
+    <p class="detail-text">Founded in early 2026, STRIDE emerged from a simple observation: the footwear industry was divided between ugly orthopedic shoes and stylish sneakers that caused long-term joint pain. We set out to bridge that gap. Our headquarters serves as a laboratory where we experiment with carbon-fiber plates, recycled ocean plastics, and breathable knit fabrics to create the future of movement.</p>
+    <p class="detail-text">Sustainability is at our core. We recognize that the fashion industry has a significant environmental footprint, which is why we've committed to a zero-waste manufacturing process. By 2027, our goal is for every single component of a STRIDE shoe—from the laces to the sole—to be 100% biodegradable or recyclable. We believe in leaving a legacy of health, not just for our customers, but for the planet.</p>
   </div>
 </main>
 
 <main id="faq" class="page-content">
-    <div class="container">
-      <h2 class="sec-title">Common <em>Questions</em></h2>
-      <div style="max-width:800px; margin:0 auto; text-align:left;">
-        <div style="margin-bottom:2rem; padding:1.5rem; background:var(--gray-soft); border-radius:15px;">
-            <h4 style="color:var(--teal-deep); margin-bottom:0.5rem;">How do I choose the right size?</h4>
-            <p>STRIDE shoes fit true to size. If you are between sizes, we recommend sizing up.</p>
-        </div>
+  <div class="container">
+    <h2 class="sec-title">Common <em>Questions</em></h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <h4>How do I choose the correct size?</h4>
+        <p>STRIDE shoes are designed to fit true to size based on international athletic standards. However, due to our integrated compression knit technology, the fit can feel snug at first. If you prefer a roomier feel or have a wider foot profile, we recommend choosing a half-size larger than your standard shoe size.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What is your return and exchange policy?</h4>
+        <p>We want you to be completely satisfied with your purchase. We offer a 30-day "Perfect Fit" guarantee. If your shoes don't feel exactly right, you can return them for a full refund or exchange, provided they are in their original packaging and haven't been worn outdoors. We even provide the return shipping label for free!</p>
+      </div>
+      <div class="faq-item">
+        <h4>How should I clean my STRIDE shoes?</h4>
+        <p>To maintain the integrity of the teal-pigmented fabrics, we recommend hand washing with a mild detergent and cool water. Avoid machine washing or high-heat drying, as this can degrade the specialized adhesive bonds in the midsole. Let them air dry in a shaded area for the best results.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do you ship internationally?</h4>
+        <p>Yes, STRIDE currently ships to over 50 countries worldwide. Shipping times vary by location, but most international orders arrive within 7-12 business days. Please note that customs fees or import duties may apply depending on your country's regulations.</p>
       </div>
     </div>
+  </div>
+</main>
+
+<main id="contact" class="page-content">
+  <div class="container" style="text-align: center;">
+    <h2 class="sec-title">Get In <em>Touch</em></h2>
+    <p class="detail-text" style="text-align: center;">Have a specific question about an order or a partnership inquiry? Our team is available 24/7 to assist you. We value direct communication with our community and strive to respond to all emails within 4 business hours.</p>
+    <div style="background:var(--gray-soft); padding:4rem; border-radius:30px; margin-top:2rem;">
+        <h3 style="color:var(--teal-deep); margin-bottom:1rem;">Official Contact Email</h3>
+        <a href="mailto:tanushsatgur11@gmail.com" style="font-size:2rem; color:var(--teal-mid); text-decoration:none; font-weight:700;">tanushsatgur11@gmail.com</a>
+        <p style="margin-top:2rem; font-weight:700; color:var(--text-main);">Global Support: +1 (800) STRIDE-01</p>
+    </div>
+  </div>
 </main>
 
 <main id="privacy" class="page-content">
   <div class="container">
-    <h2 class="sec-title">Privacy <em>Policy</em></h2>
-    <div class="large-desc">
-      <p>Google AdSense Compliance: Google, as a third-party vendor, uses cookies to serve ads on this site. Google's use of the DART cookie enables it to serve ads to our users based on their visit to our site and other sites on the Internet.</p>
+    <h2 class="sec-title">Privacy & <em>Security</em></h2>
+    <div class="detail-text">
+      <p>Your privacy is our priority. This policy outlines how we handle your data. We collect minimal information—only what is necessary to process your orders and improve your browsing experience. We use industry-standard encryption to ensure your payment details and personal information remain secure.</p>
+      <br>
+      <p><strong>Google AdSense & Cookies:</strong> As a transparent digital platform, we utilize Google AdSense to serve relevant advertisements. Google uses cookies to serve ads based on a user's prior visits to our website or other websites. You may opt out of personalized advertising by visiting Google's Ads Settings.</p>
     </div>
   </div>
 </main>
 
 <footer>
   <div class="foot-grid">
-    <div><a class="nav-logo" style="color:white;">STRIDE<span>.</span></a></div>
-    <div><h4 class="foot-title">Explore</h4>
-        <a class="foot-link" onclick="showPage('collection')">Catalog</a>
+    <div><a class="nav-logo" style="color:white;">STRIDE<span>.</span></a><p style="margin-top:1rem; font-size:0.8rem;">Defining the future of movement since 2026.</p></div>
+    <div><h4 class="foot-title">Company</h4>
         <a class="foot-link" onclick="showPage('about')">The Brand</a>
+        <a class="foot-link" onclick="showPage('collection')">Catalog</a>
     </div>
-    <div><h4 class="foot-title">Legal</h4>
-        <a class="foot-link" onclick="showPage('privacy')">Privacy Policy</a>
-        <a class="foot-link" onclick="showPage('faq')">FAQ</a>
+    <div><h4 class="foot-title">Support</h4>
+        <a class="foot-link" onclick="showPage('faq')">Help Center / FAQ</a>
+        <a class="foot-link" onclick="showPage('contact')">Contact Us</a>
     </div>
-    <div><h4 class="foot-title">Contact</h4>
-        <p style="font-size:0.9rem;">Email: tanushsatgur11@gmail.com</p>
-        <p style="font-size:0.9rem;">Phone: +1 (800) STRIDE-01</p>
+    <div><h4 class="foot-title">Business</h4>
+        <p style="font-size:0.85rem;">Email: tanushsatgur11@gmail.com</p>
+        <a class="foot-link" onclick="showPage('privacy')" style="margin-top:1rem;">Privacy Policy</a>
     </div>
   </div>
-  <div style="margin-top:2rem; text-align:center; font-size:0.8rem;">&copy; 2026 STRIDE FOOTWEAR.</div>
+  <div style="margin-top:3rem; text-align:center; font-size:0.8rem; border-top:1px solid rgba(255,255,255,0.1); padding-top:2rem;">&copy; 2026 STRIDE FOOTWEAR. All rights reserved.</div>
 </footer>
 
 <script>
